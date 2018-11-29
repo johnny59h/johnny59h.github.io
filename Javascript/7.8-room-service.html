@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>7.8 - Room Service</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+				
+		var today = new Date();
+		
+		//var hour = today.getHours();
+		var hour = Number(prompt("Enter teh hour"));
+
+		// bonus + 2, automatically detect what time it is instead of asking
+		
+		if (hour < 10 && hour > 6) {
+			document.write("You can find a continental breakfast served in the lobby.")
+		}		
+		else if (hour < 14 && hour >  11) {
+			document.write("The restaurant is open.")
+			
+			var reservation = confirm("Do you want a reservation?")
+			if (reservation){
+				document.write("You have a reservation for " + 11 + (30 * (Math.floor(Math.random() * 5))));
+			}
+		}		
+		else if (hour < 21 && hour >  17) {
+			document.write("You can order room service or visit the restaurant.")
+		}		
+		else {
+			document.write("Please wait or go out for a snack.")
+		}
+
+	</script>
+</body>
+</html>

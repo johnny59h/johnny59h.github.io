@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	
+	<script type="text/javascript">
+	
+		var day_of_Christmas = 1
+		
+		while(day_of_Christmas <= 12){ 
+			var day_th = day_of_Christmas;
+			if( day_of_Christmas == 1) {
+				day_th = "st";
+			} else if( day_of_Christmas == 2){
+				day_th = "nd";
+			} else if( day_of_Christmas == 3){
+				day_th = "rd";
+			} else {
+				day_th = "th"
+			}
+			
+			document.write("On the " + day_of_Christmas + day_th + " day of Christmas my true love gave to me:<br>" );
+
+			switch(day_of_Christmas){
+				case 12:
+					document.write("Twelve drummers drumming" + "<br>")
+
+				case 11:
+					document.write("Eleven pipers piping" + "<br>")
+
+				case 10:
+					document.write("Ten lords a-leaping" + "<br>")
+
+				case 9:
+					document.write("Nine ladies dancing" + "<br>")
+
+				case 8:
+					document.write("Eight maids a-milking" + "<br>")
+
+				case 7:
+					document.write("Seven swans a-swimming" + "<br>")
+
+				case 6:
+					document.write("Six geese a-laying" + "<br>")
+
+				case 5:
+					document.write("Five gold rings" + "<br>")
+
+				case 4:
+					document.write("Four colly birds" + "<br>")
+
+				case 3:
+					document.write("Three french hens" + "<br>")
+
+				case 2:
+					document.write("Two turtle doves" + "<br>")
+
+				case 1:
+					document.write("A partridge in a pear tree" + "<br>" + "<br>")
+					break;
+			} // end switch
+			day_of_Christmas++;
+		} // end while
+							  
+	</script>
+	
+</body>
+</html>

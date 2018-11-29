@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>8.6 - Rock, Paper, Scissors</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+
+	var wins = 0
+	var losses = 0
+		function compare(playerChoice, computerChoice) {
+			// compare inputs
+			var winner = 0
+			if (playerChoice == computerChoice) {
+
+					document.write("It's a tie!")
+
+			}
+			else if (((playerChoice + computerChoice) % 2) == 0) {
+
+					if (playerChoice == 1) {
+
+							document.write("Player wins!")
+							wins++
+
+					}
+					else if (computerChoice == 1) {
+
+							document.write("Computer wins!")
+							losses++
+					}
+
+			}
+			else if (computerChoice > playerChoice) {
+
+					document.write("Computer Wins!")
+					losses++
+			}
+			else if (playerChoice > computerChoice) {
+
+					document.write("Player wins!")
+					wins++
+			}
+			// document.write who wins
+
+
+		}
+
+		// calculate computer choice
+		while (true) {
+		var c =  Math.ceil(3 * Math.random());
+
+
+		// ask player for their choice
+		var p = parseInt(prompt("1 for rock, 2 for paper, 3 for scissors"));
+
+/*
+		if(c == 1) {
+			console.log("computer chose: rock");
+		} else if( c == 2) {
+			console.log("computer chose: paper");
+		} else {
+			console.log("computer chose: scissors");
+		}
+
+		if(p == 1) {
+			console.log("player chose: rock");
+		} else if( p == 2) {
+			console.log("player chose: paper");
+		} else {
+			console.log("player chose: scissors");
+		}
+		*/
+
+		// call function
+		compare(p, c);
+		document.write("Wins: " + wins)
+		document.write("Losses: " + losses)
+
+		var again = confirm("Do you want to play again?")
+
+		if (!again) {
+			break;
+		}
+	}
+	</script>
+</body>
+</html>

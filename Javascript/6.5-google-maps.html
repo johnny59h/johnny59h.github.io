@@ -1,0 +1,20 @@
+ <!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>6.5 - Google Maps</title>
+</head>
+
+<body>
+<script type="text/javascript">
+	var distance = prompt("How far are you travelling in miles?");
+	var speed = prompt("What will be your average speed in mph?");
+	
+	// calculate how long it will take here
+	var time = 60 * (distance/speed);
+	
+	document.write("Time: " + Math.floor(time / 60) + " hour " + (time % 60) + " minutes");
+	
+</script>
+</body>
+</html>

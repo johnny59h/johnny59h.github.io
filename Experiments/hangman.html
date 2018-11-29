@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	
+	<script>
+		
+		
+	
+		var word = prompt("Pick a word/sentence for someone to play hangman")
+	
+		var answerArray = [];
+		
+		var guesses = 5;
+		
+		var alreadyGuessedLetter = ["jeff"];
+		
+		for (var i = 0; i < word.length; i++){
+			if (word[i] == " ") {
+				answerArray[i] = " "
+			}
+			else { 
+				answerArray[i] = "_";
+			}
+		}
+		
+		var remainingLetters = word.length;
+		
+		while ((remainingLetters > 0) && (guesses !== 0)) {
+			
+			
+			
+			alert(answerArray.join(" "));
+			
+			var guess = prompt("Guess a letter, or click Cancel to stop playing.")
+			
+			lwrcseGuess = guess.toLowerCase();
+			
+			if (lwrcseGuess === null) {
+				
+				break;
+				
+			} else if (lwrcseGuess.length !== 1) {
+				
+				alert("Please enter a single letter.")
+				
+			}
+			
+			else {
+				
+				var wrongCounter = 0
+				
+				for (var j = 0; j < word.length; j++){
+					
+					if (word[j] === lwrcseGuess) {
+						if (answerArray[j] == "_" ) { 
+							answerArray[j] = lwrcseGuess;
+							remainingLetters--;
+							
+						}
+						if (answerArray[j] != "_"){
+							wrongCounter += 2
+						}
+						
+					}
+					else {  
+						
+						wrongCounter += 1
+							
+					}
+				}
+				
+				if (wrongCounter == word.length) { 
+					guesses -= 1
+				}
+				alert("You have " + guesses + " guesses left")
+				
+			}
+		}
+		
+		
+		alert(answerArray.join(" "));
+		
+		if (guesses == 0) { 
+		
+			alert("Oh no! You ran out of guesses! The answer was " + word);
+			
+			var tryAgain = confirm("Would you like to play again?")
+			
+			if (tryAgain) { 
+			
+				window.location.reload(true); 
+				
+			}
+			
+			else {
+				
+				alert("Bye bye")
+				
+			}
+			
+		
+		} else if (remainingLetters == 0) {
+			
+			alert("Good job! The answer was " + word);
+			
+			var tryAgain = confirm("Would you like to play again?")
+			
+			if (tryAgain) { 
+			
+				window.location.reload(true); 
+				
+			}
+			
+			else {
+				
+				alert("Bye bye")
+				
+			}
+			
+		}
+			
+			
+		
+	
+		</script>
+	
+	
+	
+</body>
+</html>

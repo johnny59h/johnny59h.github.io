@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>7.10 - Fahrenheit to Celsius Table</title>
+</head>
+
+<body>
+	<table border="1">
+		
+		<caption>Farenheit and Celsius</caption>
+		
+		<thead>
+	
+			<tr>
+			
+				<th>F</th>
+			
+				<th>C</th>
+			
+			</tr>	
+		
+		</thead>
+		
+	<script type="text/javascript">
+		var f = 20;
+		
+		while (f < 101) {
+			document.write("<tr>");
+			
+			var c = (parseInt(f) - 32) * (5/9);
+			
+				document.write("<td>" + f + "</td> <td>" + c + "</td>");
+			
+			document.write("</tr>");
+			
+			f++
+		}
+		
+		
+	</script>
+	</table>
+</body>
+</html>

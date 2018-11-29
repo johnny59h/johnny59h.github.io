@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>7.13 - switch program</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		
+		var x = true 
+		while (x = true) { 
+		
+		var program = prompt("Enter F to convert Fahrenheit to Celsius\n\nEnter C to convert Celsius to Fahrenheit\n\nEnter D to convert Dollar to Yen\n\nEnter Y to convert Yen to Dollar");
+		
+		
+		switch(program) {
+			case "F":
+				
+				
+				
+				var cc = prompt("What is the degree in Celsius?")
+	
+
+				var ff = (parseInt(cc) * (9/5)) + 32;
+	
+				alert(ff)
+
+				break;
+			case "C":
+				
+				
+				var f = prompt("What is the degree in Farenheit?")
+	
+	
+				var c = (parseInt(f) - 32) * (5/9);
+	
+				alert(c)
+
+				break;
+			case "Y":
+				
+				var yen2 = prompt("How much money do you have in yen?");
+	
+				// convert dollar to yen
+				var dollar2 = parseInt(yen2) / 112.23;
+	
+				alert("You have " + dollar2 + "dollars")
+	
+				
+				break;
+			case "D":
+				
+				var dollar = prompt("How much money do you have in USD?");
+	
+				// convert dollar to yen
+				var yen = 112.23 * parseInt(dollar);
+	
+				alert("You have " + yen + " yen")
+	
+				
+				break;
+			default:
+				var program = prompt("Enter F to convert Fahrenheit to Celsius\n\nEnter C to convert Celsius to Fahrenheit\n\nEnter D to convert Dollar to Yen\n\nEnter Y to convert Yen to Dollar");
+				break;
+		}
+			
+		var playAgain = prompt("Do you want to play again?(yes or no)")
+		
+		if (playAgain == "yes") {
+			
+		}
+		else {
+			x = false
+		}
+		}
+		
+	</script>
+</body>
+</html>
