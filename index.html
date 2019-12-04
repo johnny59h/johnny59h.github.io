@@ -11,7 +11,7 @@
         }
         .bigButton {
             width: 84.67mm;
-            height: 13.55mm;
+            height: 13mm;
             font-size: 3.39mm;
             color: #FAD744;
             background-color: #EF5455;
@@ -159,7 +159,8 @@
         <img src='PaulBasic.png' class='characters walkAcross fall' id='character1'>
         <img src='PaulOnBoat.png' class='sailAcross' id='boat'>
         <img src='ToDamascusScene.jpg' class='scene' id='backgroundImage'>
-        <input type="button" id="next" class='bigButton center' value="NEXT!"></input>
+       
+        <button onclick='nextSlide()' class='bigButton center'>NEXT!</button>
     </div>
 </body>
 </html>
@@ -322,7 +323,7 @@
     }
     var click = 0
 
-    $("#next").click(function() {
+    function nextSlide() {
         click++
         console.log(click);
         if (questionNumber == 1) { 
@@ -388,7 +389,7 @@
         else {
 
         }
-    }); 
+    } 
 
     function isCorrect() {
         answer()
