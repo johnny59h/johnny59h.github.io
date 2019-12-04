@@ -142,7 +142,7 @@
     </div>
 
     <div id='endScreen'>
-        <h1 class='center'>Good job! You have successfully traveled with Paul, and have made it to the end! Hope you enjoyed : )</h1>
+        <h1 class='center'>Good job! <br> You have successfully traveled with Paul, and have made it to the end! Hope you enjoyed :P <br> <br> Hopefully Paul is proud of you lol</h1>
     </div>
 
     <!-- The Modal -->
@@ -319,9 +319,6 @@
         else if (questionNumber == 21) {
             correctAnswer = 0
         }
-        else if (questionNumber == 22) {
-            correctAnswer = 0
-        }
     }
     var click = 0
 
@@ -397,7 +394,7 @@
         answer()
         if (clickedAnswer == correctAnswer) {
             questionNumber += 1
-            if (questionNumber < 23) {
+            if (questionNumber < 22) {
 
                 evaluate.src = 'correctIcon.png'
                 modal.style.display = 'block';
